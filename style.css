@@ -1,30 +1,30 @@
-*{
+*{ /*Para dar um reset no navegador  */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    display: flex;
-    font-family: Arial, Helvetica, sans-serif;
-    flex-direction: column;
-    justify-content: center;
+body{ /* Corpo do site */
+    display: flex; /* Deixa o site flexivel  */
+    font-family: Arial, Helvetica, sans-serif; /* Fonte do site  */
+    flex-direction: column; /* Para os itens do site ficarem organizados verticalmente */
+    justify-content: center; 
     align-items: center;
 }
 
-header{
-    width: 100%;
-    height: 150px;
+header{ /*Cabeçalho  */
+    width: 100%; /* Largura do cabeçalho  */
+    height: 150px; /* Altura do cabeçalho */
     background-color: #000000;
     color:#F2F2F2 ;
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 30px; /* Tamanho da fonte */
+    font-weight: bold; /* Peso da fonte */
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.logo{
+.logo{ /* Classe da logo */
     width: 25%;
     height: 150px;
     display: flex;
@@ -32,54 +32,54 @@ header{
     align-items: center;
 }
 
-nav{
+nav{ /*Navegador  */
 width: 75%;
 height: 70px;
 display: flex;
 justify-content: center;
 align-items: center;
 color: #F2F2F2;
-gap: 60px;
+gap: 60px; /* Para dar espaçamente entre os itens dentro do nav */
 }
 
-a{
-    text-decoration: none;
+a{ /* Os links do site */
+    text-decoration: none; /* sem decoração automatica  */
     color: #F2F2F2;
     font-size: 25px;
     font-weight: bold;
-    padding: 5px 20px;
-    border-radius: 15px;
+    padding: 5px 20px; /* para afastar as bordas do conteudo  */
+    border-radius: 15px; /* Para deixar mais arredondado os links */
 }
 
-a:hover{
+a:hover{ /* Quando passar o mouse por cima dos links mudar a cor */
     background-color: azure;
     color: #BF0404;
-    transition: 0.5s;
+    transition: 0.5s; /* Para ter um tempo entre as transições de cores  */
 }
 
-section{
+section{ /* São as sessões para colocar os proximos Box e deixar padronizado  */
     width: 100%;
     height: auto;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Para fazer a quebra caso necessario  */
     justify-content: center;
-    flex-direction: row;
+    flex-direction: row; /* Para a organização dos itens dentro do section serem horizontalmente */
     background-color: #000000;
 }
 
-.box1{
+.box1{ /* Box para colocar uma imagem e um texto  */
     background-color: #730202;
     height: 250px;
-    width: 50%;
+    width: 50%; /* Para serem dois box um do lado do outro */
     display: flex;
     font-size: 50px;
     font-weight: bold;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Os itens dele vai começar do lado esquerdo */
     align-items: center;
     padding: 25px;
 }
 
-.box2{
+.box2{ /* Box para armazenar alguns links internos  */
     height: 60px;
     width: 100%;
     display: flex;
@@ -90,23 +90,23 @@ section{
     gap: 20px;
 }
 
-.box3{
+.box3{ /* Box para colocar os produtos com uma imagem e uma pequena descrição */
     height: 200px;
     width: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 15px 15px 15px 15px;
+    margin: 15px 15px 15px 15px; /* Os box vão estar afastados um do outro */
     border-radius: 10px;
     background-color: #400101;
     flex-direction: column;
-    img{
+    img{ /* Para deixar fixo o tamanho das imagem dentro desse box */
         height: 160px;
         display: flex;
     }
 }
 
-img{
+img{ /*  configuração das imagens */
     height: 100%;
     width: 100%;
     display: flex;
@@ -114,7 +114,7 @@ img{
     align-items: center;
 }
 
-p{
+p{ /* configuração da descriçaõ*/
     height: 40px;
     width: 350px;
     display: flex;
@@ -123,14 +123,14 @@ p{
     font-weight: bold;
     font-family: monospace;
 }
-p:hover{
+p:hover{  /* mudar de cor quando passar por cima da descrição */
     background-color: azure;
     color: #BF0404;
     transition: 0.5s;
 }
 
 
-footer{
+footer{ /* Roda pé   */
     width: 100%;
     height: 70px;
     font-size: 20px;
@@ -142,11 +142,11 @@ footer{
     color: #F2F2F2;
 }
 
-@media(max-width:700px){
-    .box1, .box2, .box3, header, footer, section, nav, p, img, .logo{
+@media(max-width:700px){ /* Responsividade  */
+    .box1, .box2, .box3, header, footer, section, nav, p, img, .logo{ /*para deixar todos com a largura em 100%  */
         width: 100%;
     }
-    header, header nav{
+    header, header nav{ /* Esses aqui vai ter altura automatica e organização na vertical */
         flex-direction: column;
         height: auto;
     }
